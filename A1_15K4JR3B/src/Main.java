@@ -1,0 +1,24 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        long[] res = new long[t];
+
+        for (int i = 0; i < t; i++){
+            long n = sc.nextInt();
+            long h1 = n/2;
+            long h2 = (n+1) /2;
+            res[i] = h1 * h2;
+
+        }
+        for (int i = 0; i < t; i++){
+            System.out.println(res[i]);
+        }
+
+
+    }
+}
