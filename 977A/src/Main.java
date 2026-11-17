@@ -1,25 +1,25 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String n = sc.next();
+
+        int n = sc.nextInt();
         int k = sc.nextInt();
-        int n_int = Integer.parseInt(n);
-        StringBuilder sb = new StringBuilder(n_int);
 
-        while (k > 0) {
+        for (int i = 0; i < k; i++){
 
-            int[] arr = new int[sb.length()];
-            for (int i = 0; i < sb.length(); i++) {
-                arr[i] = Integer.valueOf(n.charAt(i)) - '0';
-
+            Integer n_integer = n;
+            String n_string = n_integer.toString();
+            int[] n1 =  new int[n_string.length()];
+            for (int j = 0; j < n1.length; j++){
+                n1[j] = n_string.charAt(j);
             }
+            if (n1[n1.length -1] != '0'){
+                n = n-1;
+            }else n = n / 10;
 
-            if (arr[arr.length - 1] == 0) {
-
-            }
         }
+        System.out.println(n);
     }
 }
